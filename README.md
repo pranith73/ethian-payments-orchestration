@@ -1,15 +1,54 @@
-# Ethian — Payments Orchestration Platform
+# ETHIAN — Payments Orchestration Platform
+*(Educational Open-Source Project)*
 
-Ethian is an educational, open-source **fintech payments orchestration** project built in Java 21 and Spring Boot 3.x.  
-This repository currently focuses on **Section 1 (High-Level Design)** and **Section 2 (Domain Model)** of the Ethian project template.
+Ethian is an educational, open-source **fintech payments orchestration platform** built using **Java 21** and **Spring Boot**.  
+It showcases **clean architecture**, **domain modeling**, **microservices fundamentals**, and **production-grade engineering practices**.
 
-## Tech Stack (up to Section 2)
+---
 
-- Java **21** (LTS)
-- Spring Boot **3.x** (added later as modules)
-- Maven
-- IntelliJ IDEA Community Edition
-- Git + GitHub (public repo later)
+## 🚀 Tech Stack (Up to Section 2)
 
-> ⚠️ Implementation is intentionally limited to the scope of **Section 1 + Section 2**.  
-> Future sections (3–13) will be added after the initial design and domain model are stable.
+- **Java 21 (LTS)**
+- **Spring Boot 3.x**
+- **Maven**
+- **IntelliJ IDEA Community Edition**
+- **Git + GitHub**
+
+---
+
+## 📘 Current Progress
+
+### **Section 1 — High-Level Architecture**
+- Core components
+- Bounded contexts
+- Event-driven model
+- Persistence strategy
+
+### **Section 2 — Domain Model (WIP)**
+- Domain entities
+- Aggregates
+- Value objects
+- Relationships
+
+---
+
+## 🧭 Roadmap (Sections 3–13)
+
+Future sections will include:
+
+- API layer
+- Controllers & DTOs
+- Service layer
+- Event-driven payments
+- Integrations with gateways
+- Rate limiting
+- Observability & Monitoring
+- Security model
+- Error handling strategy
+- Testing strategy (Unit + Integration)
+
+---
+
+## 📄 License
+This project is licensed under the **MIT License**.
+
