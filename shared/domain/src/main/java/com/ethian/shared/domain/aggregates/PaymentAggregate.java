@@ -1,15 +1,31 @@
 package com.ethian.shared.domain.aggregates;
 
+import com.ethian.shared.domain.entities.LedgerEntry;
 import com.ethian.shared.domain.entities.Payment;
 import com.ethian.shared.domain.entities.support.PaymentState;
-import com.ethian.shared.domain.identifiers.PaymentId;
+import com.ethian.shared.domain.events.DomainEvent;
 import com.ethian.shared.domain.valueobjects.TimeInstant;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
+/**
+ * Section 2.4 - PaymentAggregate
+ * Consistency boundary for payment lifecycle and related records.
+ *
+ * Owns:
+ * - Payment (root)
+ * - LedgerEntries (append-only)
+ * - DomainEvents (append-only)
+ */
 public final class PaymentAggregate {
 
     private Payment payment;
+
+    private final List<LedgerEntry> ledgerEntries = new ArrayList<>();
+    private final List<DomainEvent> domainEvents = new ArrayList<>();
 
     private PaymentAggregate(Payment payment) {
         this.payment = Objects.requireNonNull(payment, "payment");
@@ -23,13 +39,26 @@ public final class PaymentAggregate {
         return payment;
     }
 
-    /* =======================
-       DOMAIN INVARIANTS
-       ======================= */
+    public List<LedgerEntry> ledgerEntries() {
+        return Collections.unmodifiableList(ledgerEntries);
+    }
 
-    /**
-     * A payment can be authorized only once.
-     */
+    public List<DomainEvent> domainEvents() {
+        return Collections.unmodifiableList(domainEvents);
+    }
+
+    public void appendLedgerEntry(LedgerEntry entry) {
+        ledgerEntries.add(Objects.requireNonNull(entry, "entry"));
+    }
+
+    public void appendDomainEvent(DomainEvent event) {
+        domainEvents.add(Objects.requireNonNull(event, "event"));
+    }
+
+    // --------------------
+    // Invariants / transitions
+    // --------------------
+
     public void authorize(TimeInstant when) {
         requireState(PaymentState.INITIATED);
 
@@ -47,9 +76,6 @@ public final class PaymentAggregate {
         );
     }
 
-    /**
-     * Capture is allowed only after authorization.
-     */
     public void capture(TimeInstant when) {
         requireState(PaymentState.AUTHORIZED);
 
@@ -67,9 +93,6 @@ public final class PaymentAggregate {
         );
     }
 
-    /**
-     * A failed payment is terminal.
-     */
     public void fail(TimeInstant when) {
         if (payment.state() == PaymentState.SETTLED) {
             throw new IllegalStateException("Cannot fail a settled payment");
