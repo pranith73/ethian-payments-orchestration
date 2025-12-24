@@ -9,19 +9,18 @@ It is written to be \*\*beginner-friendly\*\* and also usable as a \*\*single so
 ## Contents
 
 - [2.0 Why a Domain Model?](section-2-domain-model/2.0-domain-model-why.md)
-- [2.1 Core Domain Entities](section-2-domain-model/2.1-core-domain-entities.md)
-- [2.2 ER Diagram](section-2-domain-model/2.2-er-diagram.md)
-- [2.3 Value Objects](section-2-domain-model/2.3-value-objects.md)
-- [2.4 Aggregates & Invariants](section-2-domain-model/2.4-aggregates-invariants.md)
-- [2.5 Payment State Machine](section-2-domain-model/2.5-payment-state-machine.md)
-- [2.6 Invoice State Machine](section-2-domain-model/2.6-invoice-state-machine.md)
-- [2.7 Ledger Model (Double-Entry)](section-2-domain-model/2.7-ledger-model-double-entry.md)
-- [2.8 Invariants Summary Table](section-2-domain-model/2.8-invariants-summary-table.md)
-- [2.9 Domain Events Model](section-2-domain-model/2.9-domain-events-model.md)
+- [2.01 Core Domain Entities](section-2-domain-model/2.01-core-domain-entities.md)
+- [2.02 ER Diagram](section-2-domain-model/2.02-er-diagram.md)
+- [2.03 Value Objects](section-2-domain-model/2.03-value-objects.md)
+- [2.04 Aggregates & Invariants](section-2-domain-model/2.04-aggregates-invariants.md)
+- [2.05 Payment State Machine](section-2-domain-model/2.05-payment-state-machine.md)
+- [2.06 Invoice State Machine](section-2-domain-model/2.06-invoice-state-machine.md)
+- [2.07 Ledger Model (Double-Entry)](section-2-domain-model/2.07-ledger-model-double-entry.md)
+- [2.08 Invariants Summary Table](section-2-domain-model/2.08-invariants-summary-table.md)
+- [2.09 Domain Events Model](section-2-domain-model/2.09-domain-events-model.md)
 - [2.10 Serialization Rules](section-2-domain-model/2.10-serialization-rules.md)
 - [2.11 Beginner Examples](section-2-domain-model/2.11-beginner-examples.md)
 - [2.12 Interview Hooks](section-2-domain-model/2.12-interview-hooks.md)
-
 
 ---
 
