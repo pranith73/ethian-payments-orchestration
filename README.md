@@ -1,4 +1,4 @@
-ETHIAN — Payments Orchestration Platform
+**ETHIAN — Payments Orchestration Platform**
 
 Ethian is an educational, open-source payments orchestration platform designed to demonstrate how modern fintech payment systems are structured, documented, and evolved over time.
 
