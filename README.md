@@ -1,54 +1,92 @@
-# ETHIAN — Payments Orchestration Platform
-*(Educational Open-Source Project)*
+ETHIAN — Payments Orchestration Platform
 
-Ethian is an educational, open-source **fintech payments orchestration platform** built using **Java 21** and **Spring Boot**.  
-It showcases **clean architecture**, **domain modeling**, **microservices fundamentals**, and **production-grade engineering practices**.
+Ethian is an educational, open-source payments orchestration platform designed to demonstrate how modern fintech payment systems are structured, documented, and evolved over time.
 
----
-
-## 🚀 Tech Stack (Up to Section 2)
-
-- **Java 21 (LTS)**
-- **Spring Boot 3.x**
-- **Maven**
-- **IntelliJ IDEA Community Edition**
-- **Git + GitHub**
+The project follows an architecture-first and documentation-driven approach, where system design, domain modeling, and decision records are established before full-scale implementation.
 
 ---
 
-## 📘 Current Progress
+**Project Scope**
 
-### **Section 1 — High-Level Architecture**
-- Core components
+Ethian aims to model the complete lifecycle of a payments orchestration platform, including:
+
+- Payment initiation and routing
+- Domain-driven payment modeling
+- Event-driven processing and settlement flows
+- External payment gateway integrations
+- Reliability, resilience, and observability concerns
+- Security, error handling, and compliance-aware design
+
+The platform is developed incrementally, with each phase documented and validated before proceeding to implementation.
+
+---
+
+**Technology Stack**  
+*(Currently used up to Section 2)*
+
+- Java 21 (LTS)
+- Spring Boot 3.x (Spring Framework 6)
+- Maven
+- Git and GitHub
+
+---
+
+**Current Status**
+
+**Section 1 — High-Level Architecture (Complete)**
+
+- Core system components
 - Bounded contexts
-- Event-driven model
-- Persistence strategy
+- Event-driven communication model
+- Persistence and data ownership strategy
 
-### **Section 2 — Domain Model (WIP)**
-- Domain entities
-- Aggregates
+**Section 2 — Domain Model (Complete)**
+
+- Core domain entities
+- Aggregates and aggregate boundaries
 - Value objects
-- Relationships
+- Relationships across domains
+
+These sections establish the architectural and domain foundation of the platform.
 
 ---
 
-## 🧭 Roadmap (Sections 3–13)
+**Repository Structure**
 
-Future sections will include:
+```text
+.
+├─ services/                # Microservices (Spring Boot)
+├─ shared/                  # Shared modules and domain abstractions
+└─ docs/
+   ├─ section-1-high-level-design/
+   └─ section-2-domain-model/
 
-- API layer
-- Controllers & DTOs
-- Service layer
-- Event-driven payments
-- Integrations with gateways
-- Rate limiting
-- Observability & Monitoring
-- Security model
-- Error handling strategy
-- Testing strategy (Unit + Integration)
+
+```
+---
+**Planned Sections (Roadmap)**
+
+Future documentation and implementation phases will include:
+
+- API design and external contracts
+- Controllers and DTO design
+- Service-layer orchestration logic
+- Event-driven payment processing
+- External gateway integrations
+- Rate limiting and resilience strategies
+- Observability and monitoring
+- Security and authorization model
+- Error handling approach
+- Testing strategy (unit and integration)
+
+These sections will be added incrementally as the project evolves.
 
 ---
 
-## 📄 License
-This project is licensed under the **MIT License**.
+**License and Usage Intent**
 
+This project is licensed under the MIT License (see `LICENSE`).
+
+Ethian is developed as a non-commercial, open-source project intended for learning, architectural discussion, and collaborative experimentation. The software is provided "as is", without warranty of any kind, in accordance with the MIT License.
+
+---
