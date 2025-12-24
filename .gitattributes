@@ -1,0 +1,7 @@
+﻿# Enforce consistent line endings across OS
+* text=auto
+
+# Markdown/docs should always use LF in repo
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
