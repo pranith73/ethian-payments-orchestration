@@ -1,5 +1,7 @@
 package com.ethian.shared.domain.entities;
 
+import com.ethian.shared.domain.identifiers.CustomerId;
+
 import java.util.Objects;
 
 public final class Customer {

@@ -71,7 +71,7 @@ public final class PaymentAuthorizedEvent implements DomainEvent {
     public String payload() {
         return "merchantId=" + merchantId.value()
                 + ",invoiceId=" + invoiceId.value()
-                + ",amount=" + amount.amount()
+                + ",amount=" + amount.amountInMinorUnits()
                 + ",currency=" + amount.currency();
     }
 
