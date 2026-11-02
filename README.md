@@ -1,5 +1,7 @@
 **ETHIAN — Payments Orchestration Platform**
 
+> Ethian proves a payment is processed exactly once and the ledger always balances, even under duplicate requests, redelivered messages, crashes mid-write, and concurrent updates.
+
 Ethian is an educational, open-source payments orchestration platform designed to demonstrate how modern fintech payment systems are structured, documented, and evolved over time.
 
 The project follows an architecture-first and documentation-driven approach, where system design, domain modeling, and decision records are established before full-scale implementation.
@@ -33,21 +35,19 @@ The platform is developed incrementally, with each phase documented and validate
 
 **Current Status**
 
-**Section 1 — High-Level Architecture (Complete)**
+Rebuilding toward v0.1.0. Design docs in `docs/`; earlier scaffold preserved at tag `v0-scaffold`.
 
-- Core system components
-- Bounded contexts
-- Event-driven communication model
-- Persistence and data ownership strategy
+---
 
-**Section 2 — Domain Model (Complete)**
+**Build**
 
-- Core domain entities
-- Aggregates and aggregate boundaries
-- Value objects
-- Relationships across domains
+Requires JDK 21. From the repository root:
 
-These sections establish the architectural and domain foundation of the platform.
+```bash
+./mvnw verify
+```
+
+On Windows PowerShell use `.\mvnw.cmd verify`. This compiles every module, runs the tests, and checks formatting (Spotless), static analysis (SpotBugs) and coverage (JaCoCo report).
 
 ---
 
