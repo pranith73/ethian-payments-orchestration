@@ -1,12 +1,11 @@
 package com.ethian.shared.domain.entities;
 
 import com.ethian.shared.domain.identifiers.CustomerId;
-
 import java.util.Objects;
 
 public final class Customer {
 
-    private final CustomerId customerId;// as per Section 2.1: customerId (UUID)
+    private final CustomerId customerId; // as per Section 2.1: customerId (UUID)
     private final String emailOrPhone;
     private final String name;
     private final String billingAddress;
@@ -20,15 +19,30 @@ public final class Customer {
         this.metadata = Objects.requireNonNullElse(metadata, "").trim();
     }
 
-    public static Customer of(CustomerId customerId, String emailOrPhone, String name, String billingAddress, String metadata) {
+    public static Customer of(
+            CustomerId customerId, String emailOrPhone, String name, String billingAddress, String metadata) {
         return new Customer(customerId, emailOrPhone, name, billingAddress, metadata);
     }
 
-    public CustomerId customerId() { return customerId; }
-    public String emailOrPhone() { return emailOrPhone; }
-    public String name() { return name; }
-    public String billingAddress() { return billingAddress; }
-    public String metadata() { return metadata; }
+    public CustomerId customerId() {
+        return customerId;
+    }
+
+    public String emailOrPhone() {
+        return emailOrPhone;
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public String billingAddress() {
+        return billingAddress;
+    }
+
+    public String metadata() {
+        return metadata;
+    }
 
     private static String requireNonBlank(String v, String name) {
         if (v == null || v.isBlank()) throw new IllegalArgumentException(name + " cannot be null/blank");

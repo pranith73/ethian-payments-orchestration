@@ -1,7 +1,6 @@
 package com.ethian.shared.domain.aggregates;
 
 import com.ethian.shared.domain.entities.Invoice;
-
 import java.util.Objects;
 
 /**

@@ -6,7 +6,6 @@ import com.ethian.shared.domain.identifiers.MerchantId;
 import com.ethian.shared.domain.identifiers.PaymentId;
 import com.ethian.shared.domain.valueobjects.Money;
 import com.ethian.shared.domain.valueobjects.TimeInstant;
-
 import java.util.Objects;
 
 public final class LedgerEntry {
@@ -21,13 +20,14 @@ public final class LedgerEntry {
     private final String account;
     private final TimeInstant timestamp;
 
-    private LedgerEntry(LedgerEntryId ledgerEntryId,
-                        PaymentId paymentId,
-                        MerchantId merchantId,
-                        LedgerEntryType type,
-                        Money amount,
-                        String account,
-                        TimeInstant timestamp) {
+    private LedgerEntry(
+            LedgerEntryId ledgerEntryId,
+            PaymentId paymentId,
+            MerchantId merchantId,
+            LedgerEntryType type,
+            Money amount,
+            String account,
+            TimeInstant timestamp) {
 
         this.ledgerEntryId = Objects.requireNonNull(ledgerEntryId, "ledgerEntryId");
         this.paymentId = Objects.requireNonNull(paymentId, "paymentId");
@@ -38,23 +38,44 @@ public final class LedgerEntry {
         this.timestamp = Objects.requireNonNull(timestamp, "timestamp");
     }
 
-    public static LedgerEntry of(LedgerEntryId ledgerEntryId,
-                                 PaymentId paymentId,
-                                 MerchantId merchantId,
-                                 LedgerEntryType type,
-                                 Money amount,
-                                 String account,
-                                 TimeInstant timestamp) {
+    public static LedgerEntry of(
+            LedgerEntryId ledgerEntryId,
+            PaymentId paymentId,
+            MerchantId merchantId,
+            LedgerEntryType type,
+            Money amount,
+            String account,
+            TimeInstant timestamp) {
         return new LedgerEntry(ledgerEntryId, paymentId, merchantId, type, amount, account, timestamp);
     }
 
-    public LedgerEntryId ledgerEntryId() { return ledgerEntryId; }
-    public PaymentId paymentId() { return paymentId; }
-    public MerchantId merchantId() { return merchantId; }
-    public LedgerEntryType type() { return type; }
-    public Money amount() { return amount; }
-    public String account() { return account; }
-    public TimeInstant timestamp() { return timestamp; }
+    public LedgerEntryId ledgerEntryId() {
+        return ledgerEntryId;
+    }
+
+    public PaymentId paymentId() {
+        return paymentId;
+    }
+
+    public MerchantId merchantId() {
+        return merchantId;
+    }
+
+    public LedgerEntryType type() {
+        return type;
+    }
+
+    public Money amount() {
+        return amount;
+    }
+
+    public String account() {
+        return account;
+    }
+
+    public TimeInstant timestamp() {
+        return timestamp;
+    }
 
     private static String requireNonBlank(String v, String name) {
         if (v == null || v.isBlank()) throw new IllegalArgumentException(name + " cannot be null/blank");

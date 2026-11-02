@@ -3,7 +3,6 @@ package com.ethian.shared.domain.aggregates;
 import com.ethian.shared.domain.entities.LedgerEntry;
 import com.ethian.shared.domain.entities.Merchant;
 import com.ethian.shared.domain.entities.Settlement;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -5,7 +5,6 @@ import com.ethian.shared.domain.entities.Payment;
 import com.ethian.shared.domain.entities.support.PaymentState;
 import com.ethian.shared.domain.events.DomainEvent;
 import com.ethian.shared.domain.valueobjects.TimeInstant;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -72,8 +71,7 @@ public final class PaymentAggregate {
                 PaymentState.AUTHORIZED,
                 payment.idempotencyKey(),
                 payment.createdAt(),
-                when
-        );
+                when);
     }
 
     public void capture(TimeInstant when) {
@@ -89,8 +87,7 @@ public final class PaymentAggregate {
                 PaymentState.CAPTURED,
                 payment.idempotencyKey(),
                 payment.createdAt(),
-                when
-        );
+                when);
     }
 
     public void fail(TimeInstant when) {
@@ -108,15 +105,13 @@ public final class PaymentAggregate {
                 PaymentState.FAILED,
                 payment.idempotencyKey(),
                 payment.createdAt(),
-                when
-        );
+                when);
     }
 
     private void requireState(PaymentState expected) {
         if (payment.state() != expected) {
             throw new IllegalStateException(
-                    "Invalid state transition. Expected " + expected + " but was " + payment.state()
-            );
+                    "Invalid state transition. Expected " + expected + " but was " + payment.state());
         }
     }
 }

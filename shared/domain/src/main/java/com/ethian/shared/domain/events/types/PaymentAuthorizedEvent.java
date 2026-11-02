@@ -7,7 +7,6 @@ import com.ethian.shared.domain.identifiers.MerchantId;
 import com.ethian.shared.domain.identifiers.PaymentId;
 import com.ethian.shared.domain.valueobjects.Money;
 import com.ethian.shared.domain.valueobjects.TimeInstant;
-
 import java.util.Objects;
 
 /**
@@ -29,12 +28,13 @@ public final class PaymentAuthorizedEvent implements DomainEvent {
     private final Money amount;
     private final TimeInstant occurredAt;
 
-    private PaymentAuthorizedEvent(DomainEventId eventId,
-                                  PaymentId paymentId,
-                                  MerchantId merchantId,
-                                  InvoiceId invoiceId,
-                                  Money amount,
-                                  TimeInstant occurredAt) {
+    private PaymentAuthorizedEvent(
+            DomainEventId eventId,
+            PaymentId paymentId,
+            MerchantId merchantId,
+            InvoiceId invoiceId,
+            Money amount,
+            TimeInstant occurredAt) {
         this.eventId = Objects.requireNonNull(eventId, "eventId");
         this.paymentId = Objects.requireNonNull(paymentId, "paymentId");
         this.merchantId = Objects.requireNonNull(merchantId, "merchantId");
@@ -43,12 +43,13 @@ public final class PaymentAuthorizedEvent implements DomainEvent {
         this.occurredAt = Objects.requireNonNull(occurredAt, "occurredAt");
     }
 
-    public static PaymentAuthorizedEvent of(DomainEventId eventId,
-                                           PaymentId paymentId,
-                                           MerchantId merchantId,
-                                           InvoiceId invoiceId,
-                                           Money amount,
-                                           TimeInstant occurredAt) {
+    public static PaymentAuthorizedEvent of(
+            DomainEventId eventId,
+            PaymentId paymentId,
+            MerchantId merchantId,
+            InvoiceId invoiceId,
+            Money amount,
+            TimeInstant occurredAt) {
         return new PaymentAuthorizedEvent(eventId, paymentId, merchantId, invoiceId, amount, occurredAt);
     }
 
@@ -81,8 +82,19 @@ public final class PaymentAuthorizedEvent implements DomainEvent {
     }
 
     // Optional domain convenience accessors
-    public PaymentId paymentId() { return paymentId; }
-    public MerchantId merchantId() { return merchantId; }
-    public InvoiceId invoiceId() { return invoiceId; }
-    public Money amount() { return amount; }
+    public PaymentId paymentId() {
+        return paymentId;
+    }
+
+    public MerchantId merchantId() {
+        return merchantId;
+    }
+
+    public InvoiceId invoiceId() {
+        return invoiceId;
+    }
+
+    public Money amount() {
+        return amount;
+    }
 }
