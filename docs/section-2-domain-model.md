@@ -8,7 +8,7 @@ It is written to be \*\*beginner-friendly\*\* and also usable as a \*\*single so
 
 ## Contents
 
-- [2.0 Why a Domain Model?](section-2-domain-model/2.0-domain-model-why.md)
+- [2.0 Why a Domain Model?](section-2-domain-model/2.00-domain-model-why.md)
 - [2.01 Core Domain Entities](section-2-domain-model/2.01-core-domain-entities.md)
 - [2.02 ER Diagram](section-2-domain-model/2.02-er-diagram.md)
 - [2.03 Value Objects](section-2-domain-model/2.03-value-objects.md)
@@ -34,7 +34,7 @@ It is written to be \*\*beginner-friendly\*\* and also usable as a \*\*single so
 
 
 
-📄 Details: \[2.0-domain-model-why](section-2-domain-model/2.0-domain-model-why.md)
+📄 Details: [2.0-domain-model-why](section-2-domain-model/2.00-domain-model-why.md)
 
 
 
@@ -48,7 +48,7 @@ This is the dictionary of domain objects Ethian uses.
 
 
 
-📄 Details: \[2.1-core-domain-entities](section-2-domain-model/2.1-core-domain-entities.md)
+📄 Details: [2.1-core-domain-entities](section-2-domain-model/2.01-core-domain-entities.md)
 
 
 
@@ -62,7 +62,7 @@ The \*\*relationship truth\*\* between Merchant, Customer, Invoice, Payment, Set
 
 
 
-📄 Details: \[2.2-er-diagram](section-2-domain-model/2.2-er-diagram.md)
+📄 Details: [2.2-er-diagram](section-2-domain-model/2.02-er-diagram.md)
 
 
 
@@ -76,7 +76,7 @@ Money, Currency, TimeInstant, BusinessDate (and why we use Value Objects).
 
 
 
-📄 Details: \[2.3-value-objects](section-2-domain-model/2.3-value-objects.md)
+📄 Details: [2.3-value-objects](section-2-domain-model/2.03-value-objects.md)
 
 
 
@@ -90,7 +90,7 @@ Aggregate roots + boundaries + invariants (rules we never break).
 
 
 
-📄 Details: \[2.4-aggregates-invariants](section-2-domain-model/2.4-aggregates-invariants.md)
+📄 Details: [2.4-aggregates-invariants](section-2-domain-model/2.04-aggregates-invariants.md)
 
 
 
@@ -104,7 +104,7 @@ Clear payment lifecycle states and transitions.
 
 
 
-📄 Details: \[2.5-payment-state-machine](section-2-domain-model/2.5-payment-state-machine.md)
+📄 Details: [2.5-payment-state-machine](section-2-domain-model/2.05-payment-state-machine.md)
 
 
 
@@ -118,7 +118,7 @@ Invoice lifecycle states and transitions.
 
 
 
-📄 Details: \[2.6-invoice-state-machine](section-2-domain-model/2.6-invoice-state-machine.md)
+📄 Details: [2.6-invoice-state-machine](section-2-domain-model/2.06-invoice-state-machine.md)
 
 
 
@@ -132,7 +132,7 @@ How LedgerEntry works and why fintech needs this.
 
 
 
-📄 Details: \[2.7-ledger-model-double-entry](section-2-domain-model/2.7-ledger-model-double-entry.md)
+📄 Details: [2.7-ledger-model-double-entry](section-2-domain-model/2.07-ledger-model-double-entry.md)
 
 
 
@@ -146,7 +146,7 @@ A quick “rules cheat-sheet” of invariants by entity/aggregate.
 
 
 
-📄 Details: \[2.8-invariants-summary-table](section-2-domain-model/2.8-invariants-summary-table.md)
+📄 Details: [2.8-invariants-summary-table](section-2-domain-model/2.08-invariants-summary-table.md)
 
 
 
@@ -160,7 +160,7 @@ Event contract and what Ethian services publish/consume.
 
 
 
-📄 Details: \[2.9-domain-events-model](section-2-domain-model/2.9-domain-events-model.md)
+📄 Details: [2.9-domain-events-model](section-2-domain-model/2.09-domain-events-model.md)
 
 
 
@@ -174,4 +174,4 @@ Rules for JSON/event serialization so services stay compatible.
 
 
 
-📄 Details: \[2.10-serialization-rules](section-2-domain-model/2.10-serialization-rules.md)
+📄 Details: [2.10-serialization-rules](section-2-domain-model/2.10-serialization-rules.md)
