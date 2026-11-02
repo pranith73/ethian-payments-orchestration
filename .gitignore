@@ -1,11 +1,10 @@
-# =========================
-# Java / Maven / Gradle
-# =========================
-
-# Compiled class file
+# ===== Java =====
 *.class
+*.log
+hs_err_pid*
+replay_pid*
 
-# Package Files
+# Package files
 *.jar
 *.war
 *.nar
@@ -14,68 +13,46 @@
 *.tar.gz
 *.rar
 
-# Maven / Gradle build output
+# ===== Maven =====
 target/
-build/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
 
-# allow wrapper jar and nested module targets/builds if needed
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# ===== Spring Boot =====
+HELP.md
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# JVM crash logs
-hs_err_pid*
-replay_pid*
-
-# =========================
-# IntelliJ IDEA
-# =========================
+# ===== IntelliJ IDEA =====
 .idea/
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
 *.iml
+*.iws
 *.ipr
+out/
 
-# =========================
-# Eclipse / STS
-# =========================
+# ===== Eclipse / STS =====
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
+bin/
 
-# =========================
-# NetBeans
-# =========================
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-# =========================
-# VS Code
-# =========================
+# ===== VS Code =====
 .vscode/
 
-# =========================
-# macOS
-# =========================
+# ===== OS files =====
 .DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
