@@ -1,7 +1,14 @@
-﻿# Enforce consistent line endings across OS
-* text=auto
+# Normalize all text files to LF in the repository and in working copies.
+* text=auto eol=lf
 
-# Markdown/docs should always use LF in repo
-*.md text eol=lf
-*.yml text eol=lf
-*.yaml text eol=lf
+# Windows batch scripts must keep CRLF or cmd.exe misparses them.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binary files: never touch line endings.
+*.jar binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.zip binary

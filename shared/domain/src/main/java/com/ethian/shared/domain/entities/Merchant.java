@@ -1,7 +1,6 @@
 package com.ethian.shared.domain.entities;
 
 import com.ethian.shared.domain.identifiers.MerchantId;
-
 import java.util.Objects;
 
 public final class Merchant {
@@ -14,11 +13,12 @@ public final class Merchant {
     private final String processorCredentials;
     private final String settlementConfig;
 
-    private Merchant(MerchantId merchantId,
-                     String merchantName,
-                     String merchantSettings,
-                     String processorCredentials,
-                     String settlementConfig) {
+    private Merchant(
+            MerchantId merchantId,
+            String merchantName,
+            String merchantSettings,
+            String processorCredentials,
+            String settlementConfig) {
 
         this.merchantId = Objects.requireNonNull(merchantId, "merchantId");
         this.merchantName = requireNonBlank(merchantName, "merchantName");
@@ -27,19 +27,34 @@ public final class Merchant {
         this.settlementConfig = requireNonBlank(settlementConfig, "settlementConfig");
     }
 
-    public static Merchant of(MerchantId merchantId,
-                              String merchantName,
-                              String merchantSettings,
-                              String processorCredentials,
-                              String settlementConfig) {
+    public static Merchant of(
+            MerchantId merchantId,
+            String merchantName,
+            String merchantSettings,
+            String processorCredentials,
+            String settlementConfig) {
         return new Merchant(merchantId, merchantName, merchantSettings, processorCredentials, settlementConfig);
     }
 
-    public MerchantId merchantId() { return merchantId; }
-    public String merchantName() { return merchantName; }
-    public String merchantSettings() { return merchantSettings; }
-    public String processorCredentials() { return processorCredentials; }
-    public String settlementConfig() { return settlementConfig; }
+    public MerchantId merchantId() {
+        return merchantId;
+    }
+
+    public String merchantName() {
+        return merchantName;
+    }
+
+    public String merchantSettings() {
+        return merchantSettings;
+    }
+
+    public String processorCredentials() {
+        return processorCredentials;
+    }
+
+    public String settlementConfig() {
+        return settlementConfig;
+    }
 
     private static String requireNonBlank(String v, String name) {
         if (v == null || v.isBlank()) throw new IllegalArgumentException(name + " cannot be null/blank");

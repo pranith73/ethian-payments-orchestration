@@ -11,4 +11,3 @@ public class PingController {
         return "payment-service: OK";
     }
 }
-

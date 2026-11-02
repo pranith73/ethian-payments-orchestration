@@ -5,7 +5,6 @@ import com.ethian.shared.domain.identifiers.MerchantId;
 import com.ethian.shared.domain.identifiers.SettlementId;
 import com.ethian.shared.domain.valueobjects.BusinessDate;
 import com.ethian.shared.domain.valueobjects.Money;
-
 import java.util.Objects;
 
 public final class Settlement {
@@ -19,12 +18,13 @@ public final class Settlement {
     private final SettlementStatus status;
     private final BusinessDate settlementDate;
 
-    private Settlement(SettlementId settlementId,
-                       MerchantId merchantId,
-                       String paymentIds,
-                       Money totalAmount,
-                       SettlementStatus status,
-                       BusinessDate settlementDate) {
+    private Settlement(
+            SettlementId settlementId,
+            MerchantId merchantId,
+            String paymentIds,
+            Money totalAmount,
+            SettlementStatus status,
+            BusinessDate settlementDate) {
 
         this.settlementId = Objects.requireNonNull(settlementId, "settlementId");
         this.merchantId = Objects.requireNonNull(merchantId, "merchantId");
@@ -34,19 +34,37 @@ public final class Settlement {
         this.settlementDate = Objects.requireNonNull(settlementDate, "settlementDate");
     }
 
-    public static Settlement of(SettlementId settlementId,
-                                MerchantId merchantId,
-                                String paymentIds,
-                                Money totalAmount,
-                                SettlementStatus status,
-                                BusinessDate settlementDate) {
+    public static Settlement of(
+            SettlementId settlementId,
+            MerchantId merchantId,
+            String paymentIds,
+            Money totalAmount,
+            SettlementStatus status,
+            BusinessDate settlementDate) {
         return new Settlement(settlementId, merchantId, paymentIds, totalAmount, status, settlementDate);
     }
 
-    public SettlementId settlementId() { return settlementId; }
-    public MerchantId merchantId() { return merchantId; }
-    public String paymentIds() { return paymentIds; }
-    public Money totalAmount() { return totalAmount; }
-    public SettlementStatus status() { return status; }
-    public BusinessDate settlementDate() { return settlementDate; }
+    public SettlementId settlementId() {
+        return settlementId;
+    }
+
+    public MerchantId merchantId() {
+        return merchantId;
+    }
+
+    public String paymentIds() {
+        return paymentIds;
+    }
+
+    public Money totalAmount() {
+        return totalAmount;
+    }
+
+    public SettlementStatus status() {
+        return status;
+    }
+
+    public BusinessDate settlementDate() {
+        return settlementDate;
+    }
 }
