@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.2</version>
+        <relativePath/>
+    </parent>
 
     <groupId>com.ethian</groupId>
     <artifactId>ethian-platform</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <name>Ethian Platform</name>
+    <description>Exactly-once payment processing with an always-balanced double-entry ledger</description>
+
+    <modules>
+        <module>shared/domain</module>
+        <module>services/payment-service</module>
+        <module>services/ledger-service</module>
+    </modules>
+
     <properties>
+        <!-- Single source of the Java level; spring-boot-starter-parent maps it to maven.compiler.release -->
         <java.version>21</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-
+    <build>
+        <!--
+            Core plugin versions (compiler, surefire, jar, resources, spring-boot-maven-plugin, ...)
+            are managed by spring-boot-starter-parent. Every other plugin version is pinned here, once.
+        -->
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
