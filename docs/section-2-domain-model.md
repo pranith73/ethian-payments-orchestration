@@ -19,8 +19,6 @@ It is written to be \*\*beginner-friendly\*\* and also usable as a \*\*single so
 - [2.08 Invariants Summary Table](section-2-domain-model/2.08-invariants-summary-table.md)
 - [2.09 Domain Events Model](section-2-domain-model/2.09-domain-events-model.md)
 - [2.10 Serialization Rules](section-2-domain-model/2.10-serialization-rules.md)
-- [2.11 Beginner Examples](section-2-domain-model/2.11-beginner-examples.md)
-- [2.12 Interview Hooks](section-2-domain-model/2.12-interview-hooks.md)
 
 ---
 
@@ -177,34 +175,3 @@ Rules for JSON/event serialization so services stay compatible.
 
 
 📄 Details: \[2.10-serialization-rules](section-2-domain-model/2.10-serialization-rules.md)
-
-
-
----
-
-
-
-\## 2.11 Beginner Examples
-
-Concrete examples: “Merchant issues invoice”, “Customer pays”, “Settlement happens”.
-
-
-
-📄 Details: \[2.11-beginner-examples](section-2-domain-model/2.11-beginner-examples.md)
-
-
-
----
-
-
-
-\## 2.12 Interview Hooks
-
-How to explain this domain model in interviews (architect-style).
-
-
-
-📄 Details: \[2.12-interview-hooks](section-2-domain-model/2.12-interview-hooks.md)
-
-
-
