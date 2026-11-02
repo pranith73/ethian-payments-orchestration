@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    SpotBugs exclusions. Every entry must be narrowly scoped and state why it is
+    a false positive. Real bugs are fixed, never excluded here.
+-->
+<FindBugsFilter
+        xmlns="https://github.com/spotbugs/filter/3.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://github.com/spotbugs/filter/3.0.0 https://raw.githubusercontent.com/spotbugs/spotbugs/3.1.0/spotbugs/etc/findbugsfilter.xsd">
+
+    <!--
+        EI_EXPOSE_REP: Merchant is a final class whose fields are all final and
+        immutable (MerchantId, String), so returning the reference cannot expose
+        mutable internal state.
+    -->
+    <Match>
+        <Class name="com.ethian.shared.domain.aggregates.MerchantAggregate"/>
+        <Method name="merchant"/>
+        <Bug pattern="EI_EXPOSE_REP"/>
+    </Match>
+</FindBugsFilter>
